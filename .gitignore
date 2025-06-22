@@ -1,0 +1,86 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build outputs
+dist/
+build/
+
+# Vite cache
+.vite/
+
+# Logs
+logs/
+*.log
+*.out
+*.pid
+*.seed
+*.pid.lock
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Test coverage
+coverage/
+
+# Optional npm cache directory
+.npm/
+
+# Optional eslint cache
+.eslintcache
+
+# MongoDB dump files
+dump/
+
+# Runtime data
+pids/
+*.pid
+*.seed
+
+# Frontend static files
+frontend/dist/
+frontend/.vite/
+
+# Backend build (if using Babel or TypeScript)
+backend/dist/
+backend/build/
+
+# Image uploads (if stored locally)
+uploads/
+
+# Misc
+*.tgz
+*.log
+*.bak
+*.swp
+*.tmp
+*.temp
+
+# Windows-specific
+ehthumbs.db
+Desktop.ini
+
+# Mac-specific
+.AppleDouble
+.LSOverride
+
+# React
+*.local
+.cache/

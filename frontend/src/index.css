@@ -1,0 +1,12 @@
+/* index.css */
+@import "tailwindcss";
+@import './banking-animations.css'
+
+/* @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans+Arabic:wght@100..800&display=swap'); */
+
+/* ✅ Required Tailwind layers */
+
+/* ✅ Custom global styles */
+/* body {
+  font-family: 'Playpen Sans Arabic', cursive;
+} */

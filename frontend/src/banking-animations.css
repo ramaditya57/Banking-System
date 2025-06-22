@@ -1,0 +1,126 @@
+/* ==============================================
+   GLOBAL ANIMATIONS (Used across all pages)
+   ============================================== */
+
+/* Fade in animation for page transitions and content loading */
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+  }
+  to { 
+    opacity: 1; 
+  }
+}
+
+.fade-in-50 {
+  animation: fadeIn 0.5s ease-out;
+  animation-fill-mode: both;
+}
+
+/* Slide animations for mobile menu and dropdowns */
+@keyframes slideInFromTop {
+  from { 
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-from-top-2 {
+  animation: slideInFromTop 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+/* ==============================================
+   HOME PAGE ANIMATIONS
+   ============================================== */
+
+/* Hero section slide in animation */
+@keyframes slideInFromBottom {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-from-bottom-4 {
+  animation: slideInFromBottom 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+/* Floating cards animation for hero section */
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(120px) rotate(20deg); 
+  }
+  50% { 
+    transform: translateY(-60px) rotate(-15deg); 
+  }
+}
+
+.animate-float {
+  animation: float 10s ease-in-out infinite;
+}
+
+.animate-float.delay-1000 {
+  animation-delay: 1s;
+}
+
+.animate-float.delay-2000 {
+  animation-delay: 2s;
+}
+
+/* Background pulse animation for hero section */
+@keyframes pulse {
+  0%, 100% { 
+    opacity: 0.5; 
+  }
+  50% { 
+    opacity: 0.8; 
+  }
+}
+
+/* Slow spinning background animation */
+.slow {
+  animation-duration: 40s;
+}
+
+/* ==============================================
+   UTILITY CLASSES
+   ============================================== */
+
+.animate-in {
+  animation-fill-mode: both;
+}
+
+/* ==============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================== */
+
+@media (max-width: 768px) {
+  /* Reduce animation intensity on mobile for better performance */
+  .animate-float {
+    animation-duration: 8s;
+  }
+  
+  .slow {
+    animation-duration: 30s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Respect user's motion preferences */
+  .animate-float,
+  .fade-in-50,
+  .slide-in-from-bottom-4,
+  .slide-in-from-top-2 {
+    animation: none;
+  }
+}
