@@ -120,7 +120,9 @@ JWT_SECRET=your_secret
 ## 📈 Resume Highlights
 
 ✅ **Reduced support overhead** with a dynamic loan tracker, improving visibility by **70%**
+
 ✅ **Improved onboarding efficiency** with auto-generated secure accounts, cutting processing time by **50%**
+
 ✅ Achieved **95+ Lighthouse scores** for performance and accessibility
 
 ---
