@@ -9,7 +9,7 @@ export default function LoanRepaymentForm({ loanId, onRepaid }) {
   try {
     setLoading(true);
     const res = await axios.post(
-      `http://localhost:4000/api/loan/${loanId}/repay`,
+      `https://banking-system-fi92.onrender.com/api/loan/${loanId}/repay`,
       { amount },
       {
         headers: {

@@ -26,7 +26,7 @@ export default function CustomerDashboard() {
   const fetchDashboard = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:4000/api/customer/dashboard",
+        "https://banking-system-fi92.onrender.com/api/customer/dashboard",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -58,7 +58,7 @@ export default function CustomerDashboard() {
   const handleChangePassword = async (_, newPassword) => {
     try {
       await axios.put(
-        "http://localhost:4000/api/customer/change-password",
+        "https://banking-system-fi92.onrender.com/api/customer/change-password",
         { newPassword },
         {
           headers: {

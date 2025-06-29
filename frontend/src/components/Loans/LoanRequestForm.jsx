@@ -5,7 +5,7 @@ export default function LoanRequestForm({ onRequested }) {
   const onFinish = async (vals) => {
     try {
       await axios.post(
-        'http://localhost:4000/api/loan/request',
+        'https://banking-system-fi92.onrender.com/api/loan/request',
         vals,
         {
           headers: {

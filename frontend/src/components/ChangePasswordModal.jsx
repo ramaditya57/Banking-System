@@ -20,7 +20,7 @@ export default function ChangePasswordModal({ visible, onClose, userId }) {
 
     try {
       await axios.put(
-        `http://localhost:4000/api/official/change-password`,
+        `https://banking-system-fi92.onrender.com/api/official/change-password`,
         { newPassword },
         {
           headers: {

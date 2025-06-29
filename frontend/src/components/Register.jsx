@@ -10,7 +10,7 @@ export default function Register() {
   const onFinish = async (values) => {
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/auth/register",
+        "https://banking-system-fi92.onrender.com/api/auth/register",
         values
       );
       message.success("Registered successfully!");

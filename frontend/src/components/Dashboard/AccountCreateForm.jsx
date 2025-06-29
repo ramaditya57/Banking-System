@@ -10,7 +10,7 @@ export default function AccountCreateForm({ visible, onClose, onCreate }) {
 
   useEffect(() => {
     if (visible) {
-      axios.get('http://localhost:4000/api/official/dashboard', {
+      axios.get('https://banking-system-fi92.onrender.com/api/official/dashboard', {
         headers: { Authorization: `Bearer ${token}` }
       }).then(res => {
         setCustomers(res.data.accounts.map(acc => acc.user)); // list of customer users
@@ -20,7 +20,7 @@ export default function AccountCreateForm({ visible, onClose, onCreate }) {
 
   const handleOk = () => {
     form.validateFields().then(values => {
-      axios.post(`http://localhost:4000/api/official/create-account/${values.userId}`, {}, {
+      axios.post(`https://banking-system-fi92.onrender.com/api/official/create-account/${values.userId}`, {}, {
         headers: { Authorization: `Bearer ${token}` },
       }).then(res => {
         message.success('Account created: ' + res.data.account.accountNumber);

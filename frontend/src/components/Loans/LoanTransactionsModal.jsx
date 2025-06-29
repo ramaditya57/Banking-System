@@ -12,7 +12,7 @@ export default function LoanTransactionsModal({ visible, onClose, loanId }) {
 
       try {
         const res = await axios.get(
-          `http://localhost:4000/api/loan/transactions/loan/${loanId}`,
+          `https://banking-system-fi92.onrender.com/api/loan/transactions/loan/${loanId}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,

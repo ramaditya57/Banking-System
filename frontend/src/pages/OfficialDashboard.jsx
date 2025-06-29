@@ -43,7 +43,7 @@ export default function OfficialDashboard() {
   const fetchDashboardData = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:4000/api/official/dashboard",
+        "https://banking-system-fi92.onrender.com/api/official/dashboard",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -65,7 +65,7 @@ export default function OfficialDashboard() {
 
   const fetchLoans = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/api/loan", {
+      const res = await axios.get("https://banking-system-fi92.onrender.com/api/loan", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setLoans(res.data.filter((loan) => loan.status === "pending"));
@@ -77,7 +77,7 @@ export default function OfficialDashboard() {
   const openLoanPage = async (userId) => {
     try {
       const res = await axios.get(
-        `http://localhost:4000/api/loan/user/${userId}`,
+        `https://banking-system-fi92.onrender.com/api/loan/user/${userId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -94,7 +94,7 @@ export default function OfficialDashboard() {
   const handleApproveLoan = async () => {
     try {
       await axios.put(
-        `http://localhost:4000/api/loan/${selectedLoan._id}/decision`,
+        `https://banking-system-fi92.onrender.com/api/loan/${selectedLoan._id}/decision`,
         { decision: "approve", interestRate },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -108,7 +108,7 @@ export default function OfficialDashboard() {
   const declineLoan = async (loanId) => {
     try {
       await axios.put(
-        `http://localhost:4000/api/loan/${loanId}/decision`,
+        `https://banking-system-fi92.onrender.com/api/loan/${loanId}/decision`,
         { decision: "decline" },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -123,7 +123,7 @@ export default function OfficialDashboard() {
       const amt = Math.abs(parseFloat(amount));
       if (isNaN(amt) || !["add", "deduct"].includes(type)) return;
       await axios.put(
-        `http://localhost:4000/api/official/balance/${accountId}`,
+        `https://banking-system-fi92.onrender.com/api/official/balance/${accountId}`,
         { amount: amt, type, description },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -140,7 +140,7 @@ export default function OfficialDashboard() {
   const updateStatus = async (accountId, status) => {
     try {
       await axios.put(
-        `http://localhost:4000/api/official/status/${accountId}`,
+        `https://banking-system-fi92.onrender.com/api/official/status/${accountId}`,
         { status },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -156,7 +156,7 @@ export default function OfficialDashboard() {
   const createAccount = async (userId) => {
     try {
       await axios.post(
-        `http://localhost:4000/api/official/create-account/${userId}`,
+        `https://banking-system-fi92.onrender.com/api/official/create-account/${userId}`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -170,7 +170,7 @@ export default function OfficialDashboard() {
   const handleChangePassword = async (_, newPassword) => {
     try {
       await axios.put(
-        "http://localhost:4000/api/official/change-password",
+        "https://banking-system-fi92.onrender.com/api/official/change-password",
         { newPassword },
         { headers: { Authorization: `Bearer ${token}` } }
       );

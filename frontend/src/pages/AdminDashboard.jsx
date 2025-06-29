@@ -26,10 +26,10 @@ export default function AdminDashboard() {
       const token = localStorage.getItem("token");
 
       const [usersRes, accountsRes] = await Promise.all([
-        axios.get("http://localhost:4000/api/admin/dashboard", {
+        axios.get("https://banking-system-fi92.onrender.com/api/admin/dashboard", {
           headers: { Authorization: `Bearer ${token}` },
         }),
-        axios.get("http://localhost:4000/api/admin/accounts", {
+        axios.get("https://banking-system-fi92.onrender.com/api/admin/accounts", {
           headers: { Authorization: `Bearer ${token}` },
         }),
       ]);
@@ -60,7 +60,7 @@ export default function AdminDashboard() {
         )
       );
 
-      await axios.post("http://localhost:4000/api/admin/add", cleanUser, {
+      await axios.post("https://banking-system-fi92.onrender.com/api/admin/add", cleanUser, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
 
@@ -73,7 +73,7 @@ export default function AdminDashboard() {
 
   const handleUpdateUser = async (id, updates) => {
     try {
-      await axios.put(`http://localhost:4000/api/admin/update/${id}`, updates, {
+      await axios.put(`https://banking-system-fi92.onrender.com/api/admin/update/${id}`, updates, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       fetchData();
@@ -85,7 +85,7 @@ export default function AdminDashboard() {
   const handleChangePassword = async (id, newPassword) => {
     try {
       await axios.put(
-        `http://localhost:4000/api/admin/change-password/${id}`,
+        `https://banking-system-fi92.onrender.com/api/admin/change-password/${id}`,
         { newPassword },
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
@@ -101,7 +101,7 @@ export default function AdminDashboard() {
     if (!window.confirm("Are you sure you want to delete this user?")) return;
 
     try {
-      await axios.delete(`http://localhost:4000/api/admin/delete/${id}`, {
+      await axios.delete(`https://banking-system-fi92.onrender.com/api/admin/delete/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       fetchData();
@@ -113,7 +113,7 @@ export default function AdminDashboard() {
   const handleStatusChange = async (accountId, newStatus) => {
     try {
       await axios.put(
-        `http://localhost:4000/api/admin/account/status/${accountId}`,
+        `https://banking-system-fi92.onrender.com/api/admin/account/status/${accountId}`,
         { status: newStatus },
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
