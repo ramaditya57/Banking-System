@@ -137,13 +137,6 @@ JWT_SECRET=your_secret
 
 ---
 
-## 📞 Contact & Support
-
-* 📧 Email: [support@modernbank.com](mailto:support@modernbank.com)
-* 📞 Phone: 1-800-BANK-NOW
-
----
-
 ## 👨‍💻 Author
 
 Developed by **[Ramaditya Chaudhary](https://github.com/ramaditya57)**
